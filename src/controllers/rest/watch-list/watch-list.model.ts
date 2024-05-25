@@ -4,4 +4,7 @@ export class AddToWatchListPayload {
   @Property()
   @Required()
   mediaId: string;
+
+  @Property()
+  seasonId: string;
 }

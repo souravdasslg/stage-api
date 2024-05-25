@@ -1,4 +1,4 @@
-import { BodyParams, Context, Controller, Delete, Get, Inject, Post, QueryParams, UseBefore } from "@tsed/common";
+import { BodyParams, Context, Controller, Delete, Get, Inject, Post, QueryParams } from "@tsed/common";
 import { WatchListService } from "../../../services/watchList.service";
 import { Auth } from "../../../middlewares/auth-middleware";
 import { AddToWatchListPayload } from "./watch-list.model";
@@ -6,6 +6,7 @@ import { Returns } from "@tsed/schema";
 import { Pagination } from "../../../paginations/Pagination";
 import { WatchListMediaItem } from "../../../entities/watch-list.entity";
 import { Pageable } from "../../../paginations/Pageable";
+import { UseCache } from "@tsed/platform-cache";
 
 @Controller("/watch-list")
 @Auth()
@@ -15,30 +16,35 @@ export class WatchListController {
 
   @Get("/")
   async getWatchList(@Context() ctx: Context) {
-    return this.watchListService.getFullWatchList(ctx.user.id, {
-      page: 1,
-      size: 10,
-      sort: "asc",
-      offset: 0,
-      limit: 10
-    });
+    return this.watchListService.getRecentlyAddedMedia(ctx.user.id);
   }
 
-  @Get("/full")
+  @Get("/paginated")
   @Returns(206, Pagination).Of(WatchListMediaItem).Title("Watch List")
-  async getFullWatchList(@QueryParams() pageableOptions: Pageable, @Context() ctx: Context) {
-    return this.watchListService.getFullWatchList(ctx.user.id, pageableOptions);
+  async getPaginatedWatchList(@QueryParams() pageableOptions: Pageable, @Context() ctx: Context) {
+    return this.watchListService.getPaginatedWatchList(ctx.user.id, pageableOptions);
   }
 
   @Post("/")
   async addToWatchList(@BodyParams() input: AddToWatchListPayload, @Context() ctx: Context) {
-    await this.watchListService.addMediaToWatchList({
+    const response = await this.watchListService.addMediaToWatchList({
       userId: ctx.user.id,
       mediaId: input.mediaId
     });
-    return { message: "Media added to watch list" };
+    return {
+      message: "Media added to watch list",
+      data: response
+    };
   }
 
   @Delete("/")
-  async removeFromWatchList() {}
+  async removeFromWatchList(@BodyParams() mediaId: string, @Context() ctx: Context) {
+    const response = await this.watchListService.removeMediaFromWatchList({
+      userId: ctx.user.id,
+      mediaId
+    });
+    return {
+      message: "Media removed from watch list"
+    };
+  }
 }

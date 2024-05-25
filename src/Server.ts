@@ -7,18 +7,13 @@ import "@tsed/swagger";
 import { config } from "./config/index";
 import * as rest from "./controllers/rest/index";
 import * as pages from "./controllers/pages/index";
-import * as mongooseStore from "cache-manager-mongoose";
-import mongoose from "mongoose";
 
 @Configuration({
   ...config,
   cache: {
-    store: mongooseStore,
-    mongoose,
-    modelOptions: {
-      collection: "watchlistmediaitems",
-      versionKey: false
-    }
+    ttl: 60 * 60 * 1000, // 1 Hour
+    store: "memory",
+    prefix: "myPrefix" // to namespace all keys related to the cache
   },
   acceptMimes: ["application/json"],
   httpPort: process.env.PORT || 8083,

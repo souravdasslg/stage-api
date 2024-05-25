@@ -8,7 +8,7 @@ import sampleMovies from "./movies.json";
 import sampleTvSeries from "./tv-series.json";
 import sampleUsers from "./users.json";
 
-import { Genre } from "../../types/types";
+import { Genre } from "../../types";
 import { UserEntity } from "../../entities/user.entity";
 import { UserRepository } from "../../repositories/user.repository";
 

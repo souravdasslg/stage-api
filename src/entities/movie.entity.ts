@@ -1,7 +1,7 @@
 import { Model } from "@tsed/mongoose";
-import { Property } from "@tsed/schema";
+import { Enum, Property } from "@tsed/schema";
 import { BaseEntity } from "./base.entity";
-import { Genre } from "../types/types";
+import { Genre } from "../types";
 
 @Model({ name: "movie", schemaOptions: { timestamps: true } })
 export class MovieEntity extends BaseEntity {
@@ -12,6 +12,7 @@ export class MovieEntity extends BaseEntity {
   description: string;
 
   @Property()
+  @Enum(Genre)
   genres: Genre[];
 
   @Property()
