@@ -13,7 +13,7 @@ import * as pages from "./controllers/pages/index";
   cache: {
     ttl: 60 * 60 * 1000, // 1 Hour
     store: "memory",
-    prefix: "myPrefix" // to namespace all keys related to the cache
+    prefix: "stage" // to namespace all keys related to the cache
   },
   acceptMimes: ["application/json"],
   httpPort: process.env.PORT || 8083,

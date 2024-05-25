@@ -5,8 +5,6 @@ import { Server } from "@/Server";
 import { WatchListService } from "../../../services/watchList.service";
 // import { WatchListController } from "./watch-list.controller";
 
-vi.mock("../../../services/watchList.service");
-
 describe("WatchListController", () => {
   beforeAll(async () => {
     await PlatformTest.bootstrap(Server)();
@@ -55,7 +53,6 @@ describe("WatchListController", () => {
 
   describe("POST /watch-list", () => {
     it("should add media to the watch list", async () => {
-      vi.spyOn(WatchListService, "addMedia").mockResolvedValue({ message: "Media added to watch list" } as any);
       const request = SuperTest(PlatformTest.callback());
       const payload = { mediaId: "some-media-id" };
       const response = await request.post("/api/watch-list").send(payload).expect(200);

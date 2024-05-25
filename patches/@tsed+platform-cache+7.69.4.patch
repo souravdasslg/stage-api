@@ -1,0 +1,13 @@
+diff --git a/node_modules/@tsed/platform-cache/lib/types/interfaces/interfaces.d.ts b/node_modules/@tsed/platform-cache/lib/types/interfaces/interfaces.d.ts
+index 6b9d41f..cdfc646 100644
+--- a/node_modules/@tsed/platform-cache/lib/types/interfaces/interfaces.d.ts
++++ b/node_modules/@tsed/platform-cache/lib/types/interfaces/interfaces.d.ts
+@@ -8,7 +8,7 @@ import type { CacheManager } from "../services/PlatformCache";
+ export type PlatformCacheLegacyStoreFactory = {
+     create(...args: any[]): Promise<Store | any> | Store | any;
+ };
+-export type PlatformCacheSettings<Config extends object = any, S extends Store = any> = CachingConfig<Config> & {
++export type PlatformCacheSettings<Config extends Record<string, unknown> = any, S extends Store = any> = CachingConfig<Config> & {
+     caches?: Cache[];
+     store?: "memory" | Store | PlatformCacheLegacyStoreFactory | FactoryStore<S, Config>;
+     max?: number;

@@ -6,7 +6,6 @@ import { Returns } from "@tsed/schema";
 import { Pagination } from "../../../paginations/Pagination";
 import { WatchListMediaItem } from "../../../entities/watch-list.entity";
 import { Pageable } from "../../../paginations/Pageable";
-import { UseCache } from "@tsed/platform-cache";
 
 @Controller("/watch-list")
 @Auth()

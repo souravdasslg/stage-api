@@ -1,6 +1,6 @@
 import { BaseEntity } from "./base.entity";
-import { DateFormat, Description, Format, Property, Required, DateTime } from "@tsed/schema";
-import { Model, MongooseIndex, MongoosePlugin, PreHook, Ref, Unique } from "@tsed/mongoose";
+import { Property, Required } from "@tsed/schema";
+import { Model, MongooseIndex, Ref } from "@tsed/mongoose";
 import { TVShowEntity } from "./tv-show.entity";
 import { MovieEntity } from "./movie.entity";
 import { MediaType } from "../types";

@@ -2,7 +2,7 @@ import { WatchListMediaItem } from "../entities/watch-list.entity";
 import { MongooseModel } from "@tsed/mongoose";
 import { Inject } from "@tsed/di";
 import { MediaType } from "../types";
-import { BadRequest, NotFound } from "@tsed/exceptions";
+import { NotFound } from "@tsed/exceptions";
 
 export class WatchListRepository {
   @Inject(WatchListMediaItem)
