@@ -1,0 +1,162 @@
+[
+  {
+    "title": "Inception",
+    "description": "A thief who steals corporate secrets through the use of dream-sharing technology.",
+    "genres": ["SciFi"],
+    "releaseDate": "2010-07-16T00:00:00.000Z",
+    "director": "Christopher Nolan",
+    "actors": ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Elliot Page"]
+  },
+  {
+    "title": "The Shawshank Redemption",
+    "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+    "genres": ["Drama"],
+    "releaseDate": "1994-09-23T00:00:00.000Z",
+    "director": "Frank Darabont",
+    "actors": ["Tim Robbins", "Morgan Freeman", "Bob Gunton"]
+  },
+  {
+    "title": "The Godfather",
+    "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+    "genres": ["Drama"],
+    "releaseDate": "1972-03-24T00:00:00.000Z",
+    "director": "Francis Ford Coppola",
+    "actors": ["Marlon Brando", "Al Pacino", "James Caan"]
+  },
+  {
+    "title": "The Dark Knight",
+    "description": "When the menace known as the Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham.",
+    "genres": ["Action", "Drama"],
+    "releaseDate": "2008-07-18T00:00:00.000Z",
+    "director": "Christopher Nolan",
+    "actors": ["Christian Bale", "Heath Ledger", "Aaron Eckhart"]
+  },
+  {
+    "title": "Pulp Fiction",
+    "description": "The lives of two mob hitmen, a boxer, a gangster and his wife intertwine in four tales of violence and redemption.",
+    "genres": ["Drama"],
+    "releaseDate": "1994-10-14T00:00:00.000Z",
+    "director": "Quentin Tarantino",
+    "actors": ["John Travolta", "Uma Thurman", "Samuel L. Jackson"]
+  },
+  {
+    "title": "Schindler's List",
+    "description": "In German-occupied Poland during World War II, Oskar Schindler gradually becomes concerned for his Jewish workforce.",
+    "genres": ["Drama"],
+    "releaseDate": "1993-12-15T00:00:00.000Z",
+    "director": "Steven Spielberg",
+    "actors": ["Liam Neeson", "Ralph Fiennes", "Ben Kingsley"]
+  },
+  {
+    "title": "Fight Club",
+    "description": "An insomniac office worker and a devil-may-care soap maker form an underground fight club.",
+    "genres": ["Drama"],
+    "releaseDate": "1999-10-15T00:00:00.000Z",
+    "director": "David Fincher",
+    "actors": ["Brad Pitt", "Edward Norton", "Meat Loaf"]
+  },
+  {
+    "title": "Forrest Gump",
+    "description": "The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man.",
+    "genres": ["Drama", "Romance"],
+    "releaseDate": "1994-07-06T00:00:00.000Z",
+    "director": "Robert Zemeckis",
+    "actors": ["Tom Hanks", "Robin Wright", "Gary Sinise"]
+  },
+  {
+    "title": "The Matrix",
+    "description": "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
+    "genres": ["Action", "SciFi"],
+    "releaseDate": "1999-03-31T00:00:00.000Z",
+    "director": "Lana Wachowski, Lilly Wachowski",
+    "actors": ["Keanu Reeves", "Laurence Fishburne", "Carrie-Anne Moss"]
+  },
+  {
+    "title": "The Lord of the Rings: The Fellowship of the Ring",
+    "description": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring.",
+    "genres": ["Action", "Drama"],
+    "releaseDate": "2001-12-19T00:00:00.000Z",
+    "director": "Peter Jackson",
+    "actors": ["Elijah Wood", "Ian McKellen", "Orlando Bloom"]
+  },
+  {
+    "title": "Star Wars: Episode IV - A New Hope",
+    "description": "Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee, and two droids to save the galaxy.",
+    "genres": ["Action", "Fantasy"],
+    "releaseDate": "1977-05-25T00:00:00.000Z",
+    "director": "George Lucas",
+    "actors": ["Mark Hamill", "Harrison Ford", "Carrie Fisher"]
+  },
+  {
+    "title": "The Silence of the Lambs",
+    "description": "A young F.B.I. cadet must receive the help of an incarcerated and manipulative cannibal killer to catch another serial killer.",
+    "genres": ["Drama"],
+    "releaseDate": "1991-02-14T00:00:00.000Z",
+    "director": "Jonathan Demme",
+    "actors": ["Jodie Foster", "Anthony Hopkins", "Lawrence A. Bonney"]
+  },
+  {
+    "title": "Saving Private Ryan",
+    "description": "Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper.",
+    "genres": ["Drama"],
+    "releaseDate": "1998-07-24T00:00:00.000Z",
+    "director": "Steven Spielberg",
+    "actors": ["Tom Hanks", "Matt Damon", "Tom Sizemore"]
+  },
+  {
+    "title": "Interstellar",
+    "description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+    "genres": ["Drama", "SciFi"],
+    "releaseDate": "2014-11-07T00:00:00.000Z",
+    "director": "Christopher Nolan",
+    "actors": ["Matthew McConaughey", "Anne Hathaway", "Jessica Chastain"]
+  },
+  {
+    "title": "Gladiator",
+    "description": "A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family.",
+    "genres": ["Action", "Drama"],
+    "releaseDate": "2000-05-05T00:00:00.000Z",
+    "director": "Ridley Scott",
+    "actors": ["Russell Crowe", "Joaquin Phoenix", "Connie Nielsen"]
+  },
+  {
+    "title": "The Green Mile",
+    "description": "The lives of guards on Death Row are affected by one of their charges: a black man accused of child murder and rape.",
+    "genres": ["Drama", "Fantasy"],
+    "releaseDate": "1999-12-10T00:00:00.000Z",
+    "director": "Frank Darabont",
+    "actors": ["Tom Hanks", "Michael Clarke Duncan", "David Morse"]
+  },
+  {
+    "title": "The Lion King",
+    "description": "Lion prince Simba and his father are targeted by his bitter uncle, who wants to ascend the throne himself.",
+    "genres": ["Drama"],
+    "releaseDate": "1994-06-24T00:00:00.000Z",
+    "director": "Roger Allers, Rob Minkoff",
+    "actors": ["Matthew Broderick", "Jeremy Irons", "James Earl Jones"]
+  },
+  {
+    "title": "The Prestige",
+    "description": "After a tragic accident, two stage magicians engage in a battle to create the ultimate illusion.",
+    "genres": ["Drama", "SciFi"],
+    "releaseDate": "2006-10-20T00:00:00.000Z",
+    "director": "Christopher Nolan",
+    "actors": ["Christian Bale", "Hugh Jackman", "Scarlett Johansson"]
+  },
+  {
+    "title": "The Departed",
+    "description": "An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang in South Boston.",
+    "genres": ["Drama"],
+    "releaseDate": "2006-10-06T00:00:00.000Z",
+    "director": "Martin Scorsese",
+    "actors": ["Leonardo DiCaprio", "Matt Damon", "Jack Nicholson"]
+  },
+  {
+    "title": "Whiplash",
+    "description": "A promising young drummer enrolls at a cut-throat music conservatory where his dreams of greatness are mentored by an instructor.",
+    "genres": ["Drama"],
+    "releaseDate": "2014-10-10T00:00:00.000Z",
+    "director": "Damien Chazelle",
+    "actors": ["Miles Teller", "J.K. Simmons", "Melissa Benoist"]
+  }
+]
