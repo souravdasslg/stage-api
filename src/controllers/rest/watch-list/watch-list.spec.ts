@@ -1,4 +1,3 @@
-import { expect, describe, it, beforeAll, afterAll, beforeEach, afterEach, vi } from "vitest";
 import { PlatformTest } from "@tsed/common";
 import SuperTest from "supertest";
 import { Server } from "@/Server";
@@ -15,7 +14,6 @@ describe("WatchListController", () => {
   });
 
   beforeEach(() => {
-    vi.clearAllMocks();
     PlatformTest.create();
   });
   afterEach(PlatformTest.reset);
