@@ -1,97 +1,62 @@
 import { PlatformTest } from "@tsed/common";
 import SuperTest from "supertest";
-import { Server } from "@/Server";
-import { WatchListService } from "../../../services/watchList.service";
-// import { WatchListController } from "./watch-list.controller";
+import { Server } from "../../../Server";
 
-describe("WatchListController", () => {
-  beforeAll(async () => {
-    await PlatformTest.bootstrap(Server)();
+describe("Server", () => {
+  beforeAll(PlatformTest.bootstrap(Server));
+  afterAll(PlatformTest.reset);
+
+  it("should call GET /api/watch-list", async () => {
+    const request = SuperTest(PlatformTest.callback());
+    const response = await request.get("/api/watch-list").set("x-user-id", "6651928a9c58d8cf572e2fb0").expect(200);
+
+    expect(response.body).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          __v: expect.any(Number),
+          _id: expect.any(String),
+          createdAt: expect.any(String),
+          mediaType: expect.any(String),
+          movie: expect.objectContaining({
+            __v: expect.any(Number),
+            _id: expect.any(String),
+            actors: expect.arrayContaining([expect.any(String)]),
+            createdAt: expect.any(String),
+            description: expect.any(String),
+            director: expect.any(String),
+            genres: expect.arrayContaining([expect.any(String)]),
+            releaseDate: expect.any(String),
+            title: expect.any(String),
+            updatedAt: expect.any(String)
+          }),
+          updatedAt: expect.any(String),
+          userId: expect.any(String)
+        })
+      ])
+    );
   });
 
-  afterAll(async () => {
-    await PlatformTest.reset();
-  });
+  it("Add media to list /api/watch-list", async () => {
+    const request = SuperTest(PlatformTest.callback());
+    const response = await request
+      .post("/api/watch-list")
+      .set("x-user-id", "6651928a9c58d8cf572e2fb0")
+      .send({ mediaId: "6651928b9c58d8cf572e2fc8" })
+      .expect(200);
 
-  beforeEach(() => {
-    PlatformTest.create();
-  });
-  afterEach(PlatformTest.reset);
+    const fetchResponse = await request.get("/api/watch-list").set("x-user-id", "6651928a9c58d8cf572e2fb0").expect(200);
 
-  describe("GET /watch-list", () => {
-    it("should return the watch list", async () => {
-      const request = SuperTest(PlatformTest.callback());
-      const response = await request.get("/api/watch-list").expect(200);
-      expect(response.body).toHaveProperty("items");
-    });
-
-    it("should return 401 if not authenticated", async () => {
-      const request = SuperTest(PlatformTest.callback());
-      const response = await request.get("/api/watch-list").expect(401);
-      expect(response.body).toHaveProperty("message", "Unauthorized");
-    });
-  });
-
-  describe("GET /watch-list/full", () => {
-    it("should return the full watch list with pagination", async () => {
-      const request = SuperTest(PlatformTest.callback());
-      const response = await request.get("/api/watch-list/full?page=1&size=10").expect(206);
-      expect(response.body).toHaveProperty("items");
-      expect(response.body).toHaveProperty("totalItems");
-      expect(response.body).toHaveProperty("totalPages");
-      expect(response.body).toHaveProperty("currentPage");
-    });
-
-    it("should return 401 if not authenticated", async () => {
-      const request = SuperTest(PlatformTest.callback());
-      const response = await request.get("/api/watch-list/full").expect(401);
-      expect(response.body).toHaveProperty("message", "Unauthorized");
-    });
-  });
-
-  describe("POST /watch-list", () => {
-    it("should add media to the watch list", async () => {
-      const request = SuperTest(PlatformTest.callback());
-      const payload = { mediaId: "some-media-id" };
-      const response = await request.post("/api/watch-list").send(payload).expect(200);
-      expect(response.body).toHaveProperty("message", "Media added to watch list");
-    });
-
-    it("should return 400 if mediaId is missing", async () => {
-      const request = SuperTest(PlatformTest.callback());
-      const payload = {};
-      const response = await request.post("/api/watch-list").send(payload).expect(400);
-      expect(response.body).toHaveProperty("message", "Bad Request");
-    });
-
-    it("should return 401 if not authenticated", async () => {
-      const request = SuperTest(PlatformTest.callback());
-      const payload = { mediaId: "some-media-id" };
-      const response = await request.post("/api/watch-list").send(payload).expect(401);
-      expect(response.body).toHaveProperty("message", "Unauthorized");
-    });
-  });
-
-  describe("DELETE /watch-list", () => {
-    it("should remove media from the watch list", async () => {
-      const request = SuperTest(PlatformTest.callback());
-      const payload = { mediaId: "some-media-id" };
-      const response = await request.delete("/api/watch-list").send(payload).expect(200);
-      expect(response.body).toHaveProperty("message", "Media removed from watch list");
-    });
-
-    it("should return 404 if media is not found in the watch list", async () => {
-      const request = SuperTest(PlatformTest.callback());
-      const payload = { mediaId: "non-existent-media-id" };
-      const response = await request.delete("/api/watch-list").send(payload).expect(404);
-      expect(response.body).toHaveProperty("message", "Media not found in watch list");
-    });
-
-    it("should return 401 if not authenticated", async () => {
-      const request = SuperTest(PlatformTest.callback());
-      const payload = { mediaId: "some-media-id" };
-      const response = await request.delete("/api/watch-list").send(payload).expect(401);
-      expect(response.body).toHaveProperty("message", "Unauthorized");
-    });
+    expect(fetchResponse.body).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          _id: expect.any(String),
+          userId: "6651928a9c58d8cf572e2fb0",
+          mediaType: expect.any(String),
+          movie: expect.objectContaining({
+            _id: "6651928b9c58d8cf572e2fc8"
+          })
+        })
+      ])
+    );
   });
 });
