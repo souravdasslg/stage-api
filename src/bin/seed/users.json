@@ -1,156 +1,156 @@
 [
   {
-    name: "Aarav Sharma",
-    username: "aaravs",
-    preferences: {
-      favoriteGenres: ["Drama", "Comedy"],
-      dislikedGenres: ["Horror"]
+    "name": "Aarav Sharma",
+    "username": "aaravs",
+    "preferences": {
+      "favoriteGenres": ["Drama", "Comedy"],
+      "dislikedGenres": ["Horror"]
     },
-    watchHistory: [
+    "watchHistory": [
       {
-        contentId: "movie1",
-        watchedOn: "2023-01-15T00:00:00Z",
-        rating: 5
+        "contentId": "movie1",
+        "watchedOn": "2023-01-15T00:00:00Z",
+        "rating": 5
       },
       {
-        contentId: "movie2",
-        watchedOn: "2023-02-20T00:00:00Z"
+        "contentId": "movie2",
+        "watchedOn": "2023-02-20T00:00:00Z"
       }
     ]
   },
   {
-    name: "Bhavna Patel",
-    username: "bhavnap",
-    preferences: {
-      favoriteGenres: ["Action", "Thriller"],
-      dislikedGenres: ["Romance"]
+    "name": "Bhavna Patel",
+    "username": "bhavnap",
+    "preferences": {
+      "favoriteGenres": ["Action", "Thriller"],
+      "dislikedGenres": ["Romance"]
     },
-    watchHistory: [
+    "watchHistory": [
       {
-        contentId: "movie3",
-        watchedOn: "2023-03-10T00:00:00Z",
-        rating: 4
+        "contentId": "movie3",
+        "watchedOn": "2023-03-10T00:00:00Z",
+        "rating": 4
       }
     ]
   },
   {
-    name: "Chirag Mehta",
-    username: "chiragm",
-    preferences: {
-      favoriteGenres: ["Sci-Fi", "Fantasy"],
-      dislikedGenres: ["Documentary"]
+    "name": "Chirag Mehta",
+    "username": "chiragm",
+    "preferences": {
+      "favoriteGenres": ["Sci-Fi", "Fantasy"],
+      "dislikedGenres": ["Documentary"]
     },
-    watchHistory: [
+    "watchHistory": [
       {
-        contentId: "movie4",
-        watchedOn: "2023-04-05T00:00:00Z",
-        rating: 3
+        "contentId": "movie4",
+        "watchedOn": "2023-04-05T00:00:00Z",
+        "rating": 3
       }
     ]
   },
   {
-    name: "Divya Singh",
-    username: "divyas",
-    preferences: {
-      favoriteGenres: ["Adventure", "Action"],
-      dislikedGenres: ["Musical"]
+    "name": "Divya Singh",
+    "username": "divyas",
+    "preferences": {
+      "favoriteGenres": ["Adventure", "Action"],
+      "dislikedGenres": ["Musical"]
     },
-    watchHistory: [
+    "watchHistory": [
       {
-        contentId: "movie5",
-        watchedOn: "2023-05-12T00:00:00Z",
-        rating: 5
+        "contentId": "movie5",
+        "watchedOn": "2023-05-12T00:00:00Z",
+        "rating": 5
       }
     ]
   },
   {
-    name: "Esha Gupta",
-    username: "eshag",
-    preferences: {
-      favoriteGenres: ["Romance", "Drama"],
-      dislikedGenres: ["Thriller"]
+    "name": "Esha Gupta",
+    "username": "eshag",
+    "preferences": {
+      "favoriteGenres": ["Romance", "Drama"],
+      "dislikedGenres": ["Thriller"]
     },
-    watchHistory: [
+    "watchHistory": [
       {
-        contentId: "movie6",
-        watchedOn: "2023-06-18T00:00:00Z",
-        rating: 2
+        "contentId": "movie6",
+        "watchedOn": "2023-06-18T00:00:00Z",
+        "rating": 2
       }
     ]
   },
   {
-    name: "Farhan Khan",
-    username: "farhank",
-    preferences: {
-      favoriteGenres: ["Crime", "Action"],
-      dislikedGenres: ["Comedy"]
+    "name": "Farhan Khan",
+    "username": "farhank",
+    "preferences": {
+      "favoriteGenres": ["Crime", "Action"],
+      "dislikedGenres": ["Comedy"]
     },
-    watchHistory: [
+    "watchHistory": [
       {
-        contentId: "movie7",
-        watchedOn: "2023-07-22T00:00:00Z",
-        rating: 4
+        "contentId": "movie7",
+        "watchedOn": "2023-07-22T00:00:00Z",
+        "rating": 4
       }
     ]
   },
   {
-    name: "Gauri Desai",
-    username: "gaurid",
-    preferences: {
-      favoriteGenres: ["Biography", "History"],
-      dislikedGenres: ["Fantasy"]
+    "name": "Gauri Desai",
+    "username": "gaurid",
+    "preferences": {
+      "favoriteGenres": ["Biography", "History"],
+      "dislikedGenres": ["Fantasy"]
     },
-    watchHistory: [
+    "watchHistory": [
       {
-        contentId: "movie8",
-        watchedOn: "2023-08-30T00:00:00Z",
-        rating: 5
+        "contentId": "movie8",
+        "watchedOn": "2023-08-30T00:00:00Z",
+        "rating": 5
       }
     ]
   },
   {
-    name: "Harsh Vardhan",
-    username: "harshv",
-    preferences: {
-      favoriteGenres: ["Sci-Fi", "Adventure"],
-      dislikedGenres: ["Drama"]
+    "name": "Harsh Vardhan",
+    "username": "harshv",
+    "preferences": {
+      "favoriteGenres": ["Sci-Fi", "Adventure"],
+      "dislikedGenres": ["Drama"]
     },
-    watchHistory: [
+    "watchHistory": [
       {
-        contentId: "movie9",
-        watchedOn: "2023-09-15T00:00:00Z",
-        rating: 3
+        "contentId": "movie9",
+        "watchedOn": "2023-09-15T00:00:00Z",
+        "rating": 3
       }
     ]
   },
   {
-    name: "Isha Kapoor",
-    username: "ishak",
-    preferences: {
-      favoriteGenres: ["Fantasy", "Romance"],
-      dislikedGenres: ["Action"]
+    "name": "Isha Kapoor",
+    "username": "ishak",
+    "preferences": {
+      "favoriteGenres": ["Fantasy", "Romance"],
+      "dislikedGenres": ["Action"]
     },
-    watchHistory: [
+    "watchHistory": [
       {
-        contentId: "movie10",
-        watchedOn: "2023-10-05T00:00:00Z",
-        rating: 4
+        "contentId": "movie10",
+        "watchedOn": "2023-10-05T00:00:00Z",
+        "rating": 4
       }
     ]
   },
   {
-    name: "Jatin Verma",
-    username: "jatinv",
-    preferences: {
-      favoriteGenres: ["Horror", "Thriller"],
-      dislikedGenres: ["Comedy"]
+    "name": "Jatin Verma",
+    "username": "jatinv",
+    "preferences": {
+      "favoriteGenres": ["Horror", "Thriller"],
+      "dislikedGenres": ["Comedy"]
     },
-    watchHistory: [
+    "watchHistory": [
       {
-        contentId: "movie11",
-        watchedOn: "2023-11-20T00:00:00Z",
-        rating: 5
+        "contentId": "movie11",
+        "watchedOn": "2023-11-20T00:00:00Z",
+        "rating": 5
       }
     ]
   }
-];
+]
