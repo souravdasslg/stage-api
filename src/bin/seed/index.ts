@@ -1,16 +1,15 @@
 import { Command, CommandProvider, Inject, QuestionOptions } from "@tsed/cli-core";
-import { MovieRepository } from "../../repositories/movies.repository";
-import { TVShowRepository } from "../../repositories/tv-show.repository";
+
 import { MovieEntity } from "../../entities/movie.entity";
 import { TVShowEntity } from "../../entities/tv-show.entity";
-
+import { UserEntity } from "../../entities/user.entity";
+import { MovieRepository } from "../../repositories/movies.repository";
+import { TVShowRepository } from "../../repositories/tv-show.repository";
+import { UserRepository } from "../../repositories/user.repository";
+import { Genre } from "../../types";
 import sampleMovies from "./movies.json";
 import sampleTvSeries from "./tv-series.json";
 import sampleUsers from "./users.json";
-
-import { Genre } from "../../types";
-import { UserEntity } from "../../entities/user.entity";
-import { UserRepository } from "../../repositories/user.repository";
 
 export interface SeedContext {}
 

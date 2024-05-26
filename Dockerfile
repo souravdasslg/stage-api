@@ -20,7 +20,7 @@ RUN npm install -g pm2
 
 COPY --from=build /opt .
 
-RUN yarn install --pure-lockfile --production
+RUN yarn --pure-lockfile --production
 
 COPY . .
 

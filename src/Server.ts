@@ -1,18 +1,23 @@
+import redisStore from "cache-manager-ioredis";
 import { join } from "path";
-import { Configuration, Inject } from "@tsed/di";
-import { PlatformApplication } from "@tsed/common";
-import "@tsed/platform-express"; // /!\ keep this import
+
+// /!\ keep this import
 import "@tsed/ajv";
+import { PlatformApplication } from "@tsed/common";
+import { Configuration, Inject } from "@tsed/di";
+import "@tsed/platform-express";
 import "@tsed/swagger";
+
 import { config } from "./config/index";
-import * as rest from "./controllers/rest/index";
 import * as pages from "./controllers/pages/index";
+import * as rest from "./controllers/rest/index";
+import "./datasource";
 
 @Configuration({
   ...config,
   cache: {
     ttl: 60 * 60 * 1000, // 1 Hour
-    store: "memory",
+    store: redisStore,
     prefix: "stage" // to namespace all keys related to the cache
   },
   acceptMimes: ["application/json"],

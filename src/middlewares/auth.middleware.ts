@@ -1,23 +1,30 @@
-import { Inject } from "@tsed/di";
-import { Middleware, MiddlewareMethods, UseAuth } from "@tsed/platform-middlewares";
-import { UserRepository } from "../repositories/user.repository";
+import { ObjectId } from "mongodb";
+
 import { Context, Req } from "@tsed/common";
-import { Unauthorized } from "@tsed/exceptions";
 import { useDecorators } from "@tsed/core";
+import { Inject } from "@tsed/di";
+import { Unauthorized } from "@tsed/exceptions";
+import { Middleware, MiddlewareMethods, UseAuth } from "@tsed/platform-middlewares";
 import { In, Returns } from "@tsed/schema";
+
+import { UserRepository } from "../repositories/user.repository";
 
 @Middleware()
 export class AuthMiddleware implements MiddlewareMethods {
   @Inject(UserRepository)
   private userRepository: UserRepository;
 
-  async use(@Req() request: Req, @Context() ctx: Context) {
-    if (ctx.request.headers && ctx.request.headers["x-user-id"]) {
-      const user = await this.userRepository.findById(ctx.request.headers["x-user-id"] as string);
-      ctx.user = user;
+  async use(@Context() ctx: Context) {
+    const userId = ctx.request.headers["x-user-id"] as string;
+    if (!ObjectId.isValid(userId)) {
+      throw new Unauthorized("Unauthorized");
+    }
+    if (userId) {
+      const user = await this.userRepository.findById(userId);
       if (!user) {
         throw new Unauthorized("Unauthorized");
       }
+      ctx.user = user;
     }
   }
 }

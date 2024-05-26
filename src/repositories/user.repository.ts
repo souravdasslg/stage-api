@@ -1,7 +1,8 @@
 import { Inject, Injectable } from "@tsed/di";
 import { MongooseModel } from "@tsed/mongoose";
-import { UserEntity } from "../entities/user.entity";
 import { PlatformCache, UseCache } from "@tsed/platform-cache";
+
+import { UserEntity } from "../entities/user.entity";
 
 @Injectable()
 export class UserRepository {

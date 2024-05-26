@@ -1,11 +1,12 @@
 import { BodyParams, Context, Controller, Delete, Get, Inject, Post, QueryParams } from "@tsed/common";
-import { WatchListService } from "../../../services/watchList.service";
-import { Auth } from "../../../middlewares/auth-middleware";
-import { AddToWatchListPayload } from "./watch-list.model";
 import { Returns } from "@tsed/schema";
-import { Pagination } from "../../../paginations/Pagination";
+
 import { WatchListMediaItem } from "../../../entities/watch-list.entity";
+import { Auth } from "../../../middlewares/auth.middleware";
 import { Pageable } from "../../../paginations/Pageable";
+import { Pagination } from "../../../paginations/Pagination";
+import { WatchListService } from "../../../services/watchList.service";
+import { AddToWatchListPayload } from "./watch-list.schema";
 
 @Controller("/watch-list")
 @Auth()
@@ -15,13 +16,19 @@ export class WatchListController {
 
   @Get("/")
   async getWatchList(@Context() ctx: Context) {
-    return this.watchListService.getRecentlyAddedMedia(ctx.user.id);
+    const response = await this.watchListService.getRecentlyAddedMedia(ctx.user.id);
+    return {
+      data: response
+    };
   }
 
   @Get("/paginated")
   @Returns(206, Pagination).Of(WatchListMediaItem).Title("Watch List")
   async getPaginatedWatchList(@QueryParams() pageableOptions: Pageable, @Context() ctx: Context) {
-    return this.watchListService.getPaginatedWatchList(ctx.user.id, pageableOptions);
+    const response = await this.watchListService.getPaginatedWatchList(ctx.user.id, pageableOptions);
+    return {
+      data: response
+    };
   }
 
   @Post("/")
@@ -38,7 +45,7 @@ export class WatchListController {
 
   @Delete("/")
   async removeFromWatchList(@BodyParams() mediaId: string, @Context() ctx: Context) {
-    const response = await this.watchListService.removeMediaFromWatchList({
+    await this.watchListService.removeMediaFromWatchList({
       userId: ctx.user.id,
       mediaId
     });

@@ -1,10 +1,11 @@
 import { Inject, Injectable } from "@tsed/di";
-import { WatchListRepository } from "../repositories/watchlist.repository";
+import { NotFound } from "@tsed/exceptions";
+import { PlatformCache, UseCache } from "@tsed/platform-cache";
+
+import { Pageable } from "../paginations/Pageable";
 import { MovieRepository } from "../repositories/movies.repository";
 import { TVShowRepository } from "../repositories/tv-show.repository";
-import { NotFound } from "@tsed/exceptions";
-import { Pageable } from "../paginations/Pageable";
-import { PlatformCache, UseCache } from "@tsed/platform-cache";
+import { WatchListRepository } from "../repositories/watchlist.repository";
 import { MediaType } from "../types";
 
 @Injectable()
@@ -21,8 +22,6 @@ export class WatchListService {
   async addMediaToWatchList({ userId, mediaId }: { userId: string; mediaId: string }) {
     // find media details.
     const [movie, tvShow] = await Promise.all([this.movieRepository.findById(mediaId), this.tvShowRepository.findById(mediaId)]);
-
-    console.log(movie, tvShow);
 
     const media = movie || tvShow;
     if (!media) throw new NotFound("Media not found");

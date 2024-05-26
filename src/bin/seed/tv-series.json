@@ -1,408 +1,416 @@
 [
   {
-    "title": "Breaking Bad",
-    "description": "A high school chemistry teacher turned methamphetamine producer partners with a former student.",
-    "genres": ["Drama"],
-    "episodes": [
+    title: "Breaking Bad",
+    description: "A high school chemistry teacher turned methamphetamine producer partners with a former student.",
+    genres: ["Drama"],
+    episodes: [
       {
-        "episodeNumber": 1,
-        "seasonNumber": 1,
-        "releaseDate": "2008-01-20T00:00:00.000Z",
-        "director": "Vince Gilligan",
-        "actors": ["Bryan Cranston", "Aaron Paul", "Anna Gunn"]
+        episodeNumber: 1,
+        seasonNumber: 1,
+        releaseDate: "2008-01-20T00:00:00.000Z",
+        director: "Vince Gilligan",
+        actors: ["Bryan Cranston", "Aaron Paul", "Anna Gunn"]
       },
       {
-        "episodeNumber": 2,
-        "seasonNumber": 1,
-        "releaseDate": "2008-01-27T00:00:00.000Z",
-        "director": "Adam Bernstein",
-        "actors": ["Bryan Cranston", "Aaron Paul", "Anna Gunn"]
+        episodeNumber: 2,
+        seasonNumber: 1,
+        releaseDate: "2008-01-27T00:00:00.000Z",
+        director: "Adam Bernstein",
+        actors: ["Bryan Cranston", "Aaron Paul", "Anna Gunn"]
       }
     ]
   },
   {
-    "title": "Stranger Things",
-    "description": "A group of kids in a small town uncover a series of supernatural mysteries.",
-    "genres": ["Drama", "Fantasy", "Horror"],
-    "episodes": [
+    title: "Stranger Things",
+    description: "A group of kids in a small town uncover a series of supernatural mysteries.",
+    genres: ["Drama", "Fantasy", "Horror"],
+    episodes: [
       {
-        "episodeNumber": 1,
-        "seasonNumber": 1,
-        "releaseDate": "2016-07-15T00:00:00.000Z",
-        "director": "The Duffer Brothers",
-        "actors": ["Winona Ryder", "David Harbour", "Finn Wolfhard"]
+        episodeNumber: 1,
+        seasonNumber: 1,
+        releaseDate: "2016-07-15T00:00:00.000Z",
+        director: "The Duffer Brothers",
+        actors: ["Winona Ryder", "David Harbour", "Finn Wolfhard"]
       },
       {
-        "episodeNumber": 2,
-        "seasonNumber": 1,
-        "releaseDate": "2016-07-15T00:00:00.000Z",
-        "director": "The Duffer Brothers",
-        "actors": ["Winona Ryder", "David Harbour", "Finn Wolfhard"]
+        episodeNumber: 2,
+        seasonNumber: 1,
+        releaseDate: "2016-07-15T00:00:00.000Z",
+        director: "The Duffer Brothers",
+        actors: ["Winona Ryder", "David Harbour", "Finn Wolfhard"]
       }
     ]
   },
   {
-    "title": "Game of Thrones",
-    "description": "Nine noble families fight for control over the lands of Westeros, while an ancient enemy returns.",
-    "genres": ["Action", "Drama"],
-    "episodes": [
+    title: "Game of Thrones",
+    description: "Nine noble families fight for control over the lands of Westeros, while an ancient enemy returns.",
+    genres: ["Action", "Drama"],
+    episodes: [
       {
-        "episodeNumber": 1,
-        "seasonNumber": 1,
-        "releaseDate": "2011-04-17T00:00:00.000Z",
-        "director": "Tim Van Patten",
-        "actors": ["Emilia Clarke", "Peter Dinklage", "Kit Harington"]
+        episodeNumber: 1,
+        seasonNumber: 1,
+        releaseDate: "2011-04-17T00:00:00.000Z",
+        director: "Tim Van Patten",
+        actors: ["Emilia Clarke", "Peter Dinklage", "Kit Harington"]
       },
       {
-        "episodeNumber": 2,
-        "seasonNumber": 1,
-        "releaseDate": "2011-04-24T00:00:00.000Z",
-        "director": "Tim Van Patten",
-        "actors": ["Emilia Clarke", "Peter Dinklage", "Kit Harington"]
+        episodeNumber: 2,
+        seasonNumber: 1,
+        releaseDate: "2011-04-24T00:00:00.000Z",
+        director: "Tim Van Patten",
+        actors: ["Emilia Clarke", "Peter Dinklage", "Kit Harington"]
       },
       {
-        "episodeNumber": 3,
-        "seasonNumber": 1,
-        "releaseDate": "2011-05-01T00:00:00.000Z",
-        "director": "Brian Kirk",
-        "actors": ["Emilia Clarke", "Peter Dinklage", "Kit Harington"]
+        episodeNumber: 3,
+        seasonNumber: 1,
+        releaseDate: "2011-05-01T00:00:00.000Z",
+        director: "Brian Kirk",
+        actors: ["Emilia Clarke", "Peter Dinklage", "Kit Harington"]
       }
     ]
   },
   {
-    "title": "The Mandalorian",
-    "description": "A lone gunfighter makes his way through the outer reaches of the galaxy.",
-    "genres": ["Action", "Fantasy"],
-    "episodes": [
+    title: "The Mandalorian",
+    description: "A lone gunfighter makes his way through the outer reaches of the galaxy.",
+    genres: ["Action", "Fantasy"],
+    episodes: [
       {
-        "episodeNumber": 1,
-        "seasonNumber": 1,
-        "releaseDate": "2019-11-12T00:00:00.000Z",
-        "director": "Dave Filoni",
-        "actors": ["Pedro Pascal", "Gina Carano", "Nick Nolte"]
+        episodeNumber: 1,
+        seasonNumber: 1,
+        releaseDate: "2019-11-12T00:00:00.000Z",
+        director: "Dave Filoni",
+        actors: ["Pedro Pascal", "Gina Carano", "Nick Nolte"]
       },
       {
-        "episodeNumber": 2,
-        "seasonNumber": 1,
-        "releaseDate": "2019-11-15T00:00:00.000Z",
-        "director": "Rick Famuyiwa",
-        "actors": ["Pedro Pascal", "Gina Carano", "Nick Nolte"]
+        episodeNumber: 2,
+        seasonNumber: 1,
+        releaseDate: "2019-11-15T00:00:00.000Z",
+        director: "Rick Famuyiwa",
+        actors: ["Pedro Pascal", "Gina Carano", "Nick Nolte"]
       }
     ]
   },
   {
-    "title": "The Witcher",
-    "description": "Geralt of Rivia, a mutated monster-hunter for hire, journeys toward his destiny in a turbulent world.",
-    "genres": ["Action", "Drama"],
-    "episodes": [
+    title: "The Witcher",
+    description: "Geralt of Rivia, a mutated monster-hunter for hire, journeys toward his destiny in a turbulent world.",
+    genres: ["Action", "Drama"],
+    episodes: [
       {
-        "episodeNumber": 1,
-        "seasonNumber": 1,
-        "releaseDate": "2019-12-20T00:00:00.000Z",
-        "director": "Alik Sakharov",
-        "actors": ["Henry Cavill", "Anya Chalotra", "Freya Allan"]
+        episodeNumber: 1,
+        seasonNumber: 1,
+        releaseDate: "2019-12-20T00:00:00.000Z",
+        director: "Alik Sakharov",
+        actors: ["Henry Cavill", "Anya Chalotra", "Freya Allan"]
       },
       {
-        "episodeNumber": 2,
-        "seasonNumber": 1,
-        "releaseDate": "2019-12-20T00:00:00.000Z",
-        "director": "Alik Sakharov",
-        "actors": ["Henry Cavill", "Anya Chalotra", "Freya Allan"]
+        episodeNumber: 2,
+        seasonNumber: 1,
+        releaseDate: "2019-12-20T00:00:00.000Z",
+        director: "Alik Sakharov",
+        actors: ["Henry Cavill", "Anya Chalotra", "Freya Allan"]
       }
     ]
   },
   {
-    "title": "The Office",
-    "description": "A mockumentary on a group of typical office workers, where the workday consists of ego clashes, inappropriate behavior, and tedium.",
-    "genres": ["Comedy"],
-    "episodes": [
+    title: "The Office",
+    description:
+      "A mockumentary on a group of typical office workers, where the workday consists of ego clashes, inappropriate behavior, and tedium.",
+    genres: ["Comedy"],
+    episodes: [
       {
-        "episodeNumber": 1,
-        "seasonNumber": 1,
-        "releaseDate": "2005-03-24T00:00:00.000Z",
-        "director": "Ken Kwapis",
-        "actors": ["Steve Carell", "Rainn Wilson", "John Krasinski"]
+        episodeNumber: 1,
+        seasonNumber: 1,
+        releaseDate: "2005-03-24T00:00:00.000Z",
+        director: "Ken Kwapis",
+        actors: ["Steve Carell", "Rainn Wilson", "John Krasinski"]
       },
       {
-        "episodeNumber": 2,
-        "seasonNumber": 1,
-        "releaseDate": "2005-03-29T00:00:00.000Z",
-        "director": "Ken Kwapis",
-        "actors": ["Steve Carell", "Rainn Wilson", "John Krasinski"]
+        episodeNumber: 2,
+        seasonNumber: 1,
+        releaseDate: "2005-03-29T00:00:00.000Z",
+        director: "Ken Kwapis",
+        actors: ["Steve Carell", "Rainn Wilson", "John Krasinski"]
       }
     ]
   },
   {
-    "title": "Friends",
-    "description": "Follows the personal and professional lives of six twenty to thirty-something-year-old friends living in Manhattan.",
-    "genres": ["Comedy", "Romance"],
-    "episodes": [
+    title: "Friends",
+    description: "Follows the personal and professional lives of six twenty to thirty-something-year-old friends living in Manhattan.",
+    genres: ["Comedy", "Romance"],
+    episodes: [
       {
-        "episodeNumber": 1,
-        "seasonNumber": 1,
-        "releaseDate": "1994-09-22T00:00:00.000Z",
-        "director": "James Burrows",
-        "actors": ["Jennifer Aniston", "Courteney Cox", "Lisa Kudrow"]
+        episodeNumber: 1,
+        seasonNumber: 1,
+        releaseDate: "1994-09-22T00:00:00.000Z",
+        director: "James Burrows",
+        actors: ["Jennifer Aniston", "Courteney Cox", "Lisa Kudrow"]
       },
       {
-        "episodeNumber": 2,
-        "seasonNumber": 1,
-        "releaseDate": "1994-09-29T00:00:00.000Z",
-        "director": "James Burrows",
-        "actors": ["Jennifer Aniston", "Courteney Cox", "Lisa Kudrow"]
+        episodeNumber: 2,
+        seasonNumber: 1,
+        releaseDate: "1994-09-29T00:00:00.000Z",
+        director: "James Burrows",
+        actors: ["Jennifer Aniston", "Courteney Cox", "Lisa Kudrow"]
       }
     ]
   },
   {
-    "title": "Sherlock",
-    "description": "A modern update finds the famous sleuth and his doctor partner solving crime in 21st century London.",
-    "genres": ["Drama"],
-    "episodes": [
+    title: "Sherlock",
+    description: "A modern update finds the famous sleuth and his doctor partner solving crime in 21st century London.",
+    genres: ["Drama"],
+    episodes: [
       {
-        "episodeNumber": 1,
-        "seasonNumber": 1,
-        "releaseDate": "2010-07-25T00:00:00.000Z",
-        "director": "Paul McGuigan",
-        "actors": ["Benedict Cumberbatch", "Martin Freeman", "Una Stubbs"]
+        episodeNumber: 1,
+        seasonNumber: 1,
+        releaseDate: "2010-07-25T00:00:00.000Z",
+        director: "Paul McGuigan",
+        actors: ["Benedict Cumberbatch", "Martin Freeman", "Una Stubbs"]
       },
       {
-        "episodeNumber": 2,
-        "seasonNumber": 1,
-        "releaseDate": "2010-08-01T00:00:00.000Z",
-        "director": "Paul McGuigan",
-        "actors": ["Benedict Cumberbatch", "Martin Freeman", "Una Stubbs"]
+        episodeNumber: 2,
+        seasonNumber: 1,
+        releaseDate: "2010-08-01T00:00:00.000Z",
+        director: "Paul McGuigan",
+        actors: ["Benedict Cumberbatch", "Martin Freeman", "Una Stubbs"]
       }
     ]
   },
   {
-    "title": "The Crown",
-    "description": "Follows the political rivalries and romance of Queen Elizabeth II's reign and the events that shaped the second half of the twentieth century.",
-    "genres": ["Drama"],
-    "episodes": [
+    title: "The Crown",
+    description:
+      "Follows the political rivalries and romance of Queen Elizabeth II's reign and the events that shaped the second half of the twentieth century.",
+    genres: ["Drama"],
+    episodes: [
       {
-        "episodeNumber": 1,
-        "seasonNumber": 1,
-        "releaseDate": "2016-11-04T00:00:00.000Z",
-        "director": "Stephen Daldry",
-        "actors": ["Claire Foy", "Matt Smith", "Vanessa Kirby"]
+        episodeNumber: 1,
+        seasonNumber: 1,
+        releaseDate: "2016-11-04T00:00:00.000Z",
+        director: "Stephen Daldry",
+        actors: ["Claire Foy", "Matt Smith", "Vanessa Kirby"]
       },
       {
-        "episodeNumber": 2,
-        "seasonNumber": 1,
-        "releaseDate": "2016-11-04T00:00:00.000Z",
-        "director": "Philip Martin",
-        "actors": ["Claire Foy", "Matt Smith", "Vanessa Kirby"]
+        episodeNumber: 2,
+        seasonNumber: 1,
+        releaseDate: "2016-11-04T00:00:00.000Z",
+        director: "Philip Martin",
+        actors: ["Claire Foy", "Matt Smith", "Vanessa Kirby"]
       }
     ]
   },
   {
-    "title": "The Boys",
-    "description": "A group of vigilantes set out to take down corrupt superheroes who abuse their superpowers.",
-    "genres": ["Action", "Comedy"],
-    "episodes": [
+    title: "The Boys",
+    description: "A group of vigilantes set out to take down corrupt superheroes who abuse their superpowers.",
+    genres: ["Action", "Comedy"],
+    episodes: [
       {
-        "episodeNumber": 1,
-        "seasonNumber": 1,
-        "releaseDate": "2019-07-26T00:00:00.000Z",
-        "director": "Dan Trachtenberg",
-        "actors": ["Karl Urban", "Jack Quaid", "Antony Starr"]
+        episodeNumber: 1,
+        seasonNumber: 1,
+        releaseDate: "2019-07-26T00:00:00.000Z",
+        director: "Dan Trachtenberg",
+        actors: ["Karl Urban", "Jack Quaid", "Antony Starr"]
       },
       {
-        "episodeNumber": 2,
-        "seasonNumber": 1,
-        "releaseDate": "2019-07-26T00:00:00.000Z",
-        "director": "Matt Shakman",
-        "actors": ["Karl Urban", "Jack Quaid", "Antony Starr"]
+        episodeNumber: 2,
+        seasonNumber: 1,
+        releaseDate: "2019-07-26T00:00:00.000Z",
+        director: "Matt Shakman",
+        actors: ["Karl Urban", "Jack Quaid", "Antony Starr"]
       }
     ]
   },
   {
-    "title": "The Handmaid's Tale",
-    "description": "Set in a dystopian future, a woman is forced to live as a concubine under a fundamentalist theocratic dictatorship.",
-    "genres": ["Drama", "SciFi"],
-    "episodes": [
+    title: "The Handmaid's Tale",
+    description: "Set in a dystopian future, a woman is forced to live as a concubine under a fundamentalist theocratic dictatorship.",
+    genres: ["Drama", "SciFi"],
+    episodes: [
       {
-        "episodeNumber": 1,
-        "seasonNumber": 1,
-        "releaseDate": "2017-04-26T00:00:00.000Z",
-        "director": "Reed Morano",
-        "actors": ["Elisabeth Moss", "Yvonne Strahovski", "Joseph Fiennes"]
+        episodeNumber: 1,
+        seasonNumber: 1,
+        releaseDate: "2017-04-26T00:00:00.000Z",
+        director: "Reed Morano",
+        actors: ["Elisabeth Moss", "Yvonne Strahovski", "Joseph Fiennes"]
       },
       {
-        "episodeNumber": 2,
-        "seasonNumber": 1,
-        "releaseDate": "2017-04-26T00:00:00.000Z",
-        "director": "Reed Morano",
-        "actors": ["Elisabeth Moss", "Yvonne Strahovski", "Joseph Fiennes"]
+        episodeNumber: 2,
+        seasonNumber: 1,
+        releaseDate: "2017-04-26T00:00:00.000Z",
+        director: "Reed Morano",
+        actors: ["Elisabeth Moss", "Yvonne Strahovski", "Joseph Fiennes"]
       }
     ]
   },
   {
-    "title": "Westworld",
-    "description": "Set at the intersection of the near future and the reimagined past, explore a world in which every human appetite can be indulged without consequence.",
-    "genres": ["Drama", "SciFi"],
-    "episodes": [
+    title: "Westworld",
+    description:
+      "Set at the intersection of the near future and the reimagined past, explore a world in which every human appetite can be indulged without consequence.",
+    genres: ["Drama", "SciFi"],
+    episodes: [
       {
-        "episodeNumber": 1,
-        "seasonNumber": 1,
-        "releaseDate": "2016-10-02T00:00:00.000Z",
-        "director": "Jonathan Nolan",
-        "actors": ["Evan Rachel Wood", "Jeffrey Wright", "Ed Harris"]
+        episodeNumber: 1,
+        seasonNumber: 1,
+        releaseDate: "2016-10-02T00:00:00.000Z",
+        director: "Jonathan Nolan",
+        actors: ["Evan Rachel Wood", "Jeffrey Wright", "Ed Harris"]
       },
       {
-        "episodeNumber": 2,
-        "seasonNumber": 1,
-        "releaseDate": "2016-10-09T00:00:00.000Z",
-        "director": "Richard J. Lewis",
-        "actors": ["Evan Rachel Wood", "Jeffrey Wright", "Ed Harris"]
+        episodeNumber: 2,
+        seasonNumber: 1,
+        releaseDate: "2016-10-09T00:00:00.000Z",
+        director: "Richard J. Lewis",
+        actors: ["Evan Rachel Wood", "Jeffrey Wright", "Ed Harris"]
       }
     ]
   },
   {
-    "title": "Black Mirror",
-    "description": "An anthology series exploring a twisted, high-tech multiverse where humanity's greatest innovations and darkest instincts collide.",
-    "genres": ["Drama", "SciFi"],
-    "episodes": [
+    title: "Black Mirror",
+    description:
+      "An anthology series exploring a twisted, high-tech multiverse where humanity's greatest innovations and darkest instincts collide.",
+    genres: ["Drama", "SciFi"],
+    episodes: [
       {
-        "episodeNumber": 1,
-        "seasonNumber": 1,
-        "releaseDate": "2011-12-04T00:00:00.000Z",
-        "director": "Otto Bathurst",
-        "actors": ["Daniel Kaluuya", "Jessica Brown Findlay", "Bryce Dallas Howard"]
+        episodeNumber: 1,
+        seasonNumber: 1,
+        releaseDate: "2011-12-04T00:00:00.000Z",
+        director: "Otto Bathurst",
+        actors: ["Daniel Kaluuya", "Jessica Brown Findlay", "Bryce Dallas Howard"]
       },
       {
-        "episodeNumber": 2,
-        "seasonNumber": 1,
-        "releaseDate": "2011-12-11T00:00:00.000Z",
-        "director": "Euros Lyn",
-        "actors": ["Daniel Kaluuya", "Jessica Brown Findlay", "Bryce Dallas Howard"]
+        episodeNumber: 2,
+        seasonNumber: 1,
+        releaseDate: "2011-12-11T00:00:00.000Z",
+        director: "Euros Lyn",
+        actors: ["Daniel Kaluuya", "Jessica Brown Findlay", "Bryce Dallas Howard"]
       }
     ]
   },
   {
-    "title": "The Expanse",
-    "description": "A police detective in the asteroid belt, the first officer of an interplanetary ice freighter and an earth-bound United Nations executive slowly discover a vast conspiracy that threatens the Earth's rebellious colony on the asteroid belt.",
-    "genres": ["Drama", "SciFi"],
-    "episodes": [
+    title: "The Expanse",
+    description:
+      "A police detective in the asteroid belt, the first officer of an interplanetary ice freighter and an earth-bound United Nations executive slowly discover a vast conspiracy that threatens the Earth's rebellious colony on the asteroid belt.",
+    genres: ["Drama", "SciFi"],
+    episodes: [
       {
-        "episodeNumber": 1,
-        "seasonNumber": 1,
-        "releaseDate": "2015-12-14T00:00:00.000Z",
-        "director": "Terry McDonough",
-        "actors": ["Steven Strait", "Shohreh Aghdashloo", "Dominique Tipper"]
+        episodeNumber: 1,
+        seasonNumber: 1,
+        releaseDate: "2015-12-14T00:00:00.000Z",
+        director: "Terry McDonough",
+        actors: ["Steven Strait", "Shohreh Aghdashloo", "Dominique Tipper"]
       },
       {
-        "episodeNumber": 2,
-        "seasonNumber": 1,
-        "releaseDate": "2015-12-15T00:00:00.000Z",
-        "director": "Terry McDonough",
-        "actors": ["Steven Strait", "Shohreh Aghdashloo", "Dominique Tipper"]
+        episodeNumber: 2,
+        seasonNumber: 1,
+        releaseDate: "2015-12-15T00:00:00.000Z",
+        director: "Terry McDonough",
+        actors: ["Steven Strait", "Shohreh Aghdashloo", "Dominique Tipper"]
       }
     ]
   },
   {
-    "title": "The Umbrella Academy",
-    "description": "A family of former child heroes, now grown apart, must reunite to continue to protect the world.",
-    "genres": ["Action", "Comedy"],
-    "episodes": [
+    title: "The Umbrella Academy",
+    description: "A family of former child heroes, now grown apart, must reunite to continue to protect the world.",
+    genres: ["Action", "Comedy"],
+    episodes: [
       {
-        "episodeNumber": 1,
-        "seasonNumber": 1,
-        "releaseDate": "2019-02-15T00:00:00.000Z",
-        "director": "Peter Hoar",
-        "actors": ["Elliot Page", "Tom Hopper", "David Castañeda"]
+        episodeNumber: 1,
+        seasonNumber: 1,
+        releaseDate: "2019-02-15T00:00:00.000Z",
+        director: "Peter Hoar",
+        actors: ["Elliot Page", "Tom Hopper", "David Castañeda"]
       },
       {
-        "episodeNumber": 2,
-        "seasonNumber": 1,
-        "releaseDate": "2019-02-15T00:00:00.000Z",
-        "director": "Andrew Bernstein",
-        "actors": ["Elliot Page", "Tom Hopper", "David Castañeda"]
+        episodeNumber: 2,
+        seasonNumber: 1,
+        releaseDate: "2019-02-15T00:00:00.000Z",
+        director: "Andrew Bernstein",
+        actors: ["Elliot Page", "Tom Hopper", "David Castañeda"]
       }
     ]
   },
   {
-    "title": "The Marvelous Mrs. Maisel",
-    "description": "A housewife in 1958 decides to become a stand-up comic.",
-    "genres": ["Comedy", "Drama"],
-    "episodes": [
+    title: "The Marvelous Mrs. Maisel",
+    description: "A housewife in 1958 decides to become a stand-up comic.",
+    genres: ["Comedy", "Drama"],
+    episodes: [
       {
-        "episodeNumber": 1,
-        "seasonNumber": 1,
-        "releaseDate": "2017-03-17T00:00:00.000Z",
-        "director": "Amy Sherman-Palladino",
-        "actors": ["Rachel Brosnahan", "Alex Borstein", "Tony Shalhoub"]
+        episodeNumber: 1,
+        seasonNumber: 1,
+        releaseDate: "2017-03-17T00:00:00.000Z",
+        director: "Amy Sherman-Palladino",
+        actors: ["Rachel Brosnahan", "Alex Borstein", "Tony Shalhoub"]
       },
       {
-        "episodeNumber": 2,
-        "seasonNumber": 1,
-        "releaseDate": "2017-03-17T00:00:00.000Z",
-        "director": "Daniel Palladino",
-        "actors": ["Rachel Brosnahan", "Alex Borstein", "Tony Shalhoub"]
+        episodeNumber: 2,
+        seasonNumber: 1,
+        releaseDate: "2017-03-17T00:00:00.000Z",
+        director: "Daniel Palladino",
+        actors: ["Rachel Brosnahan", "Alex Borstein", "Tony Shalhoub"]
       }
     ]
   },
   {
-    "title": "Mindhunter",
-    "description": "Set in the late 1970s - two FBI agents expand criminal science by delving into the psychology of murder and getting uneasily close to all-too-real monsters.",
-    "genres": ["Drama"],
-    "episodes": [
+    title: "Mindhunter",
+    description:
+      "Set in the late 1970s - two FBI agents expand criminal science by delving into the psychology of murder and getting uneasily close to all-too-real monsters.",
+    genres: ["Drama"],
+    episodes: [
       {
-        "episodeNumber": 1,
-        "seasonNumber": 1,
-        "releaseDate": "2017-10-13T00:00:00.000Z",
-        "director": "David Fincher",
-        "actors": ["Jonathan Groff", "Holt McCallany", "Anna Torv"]
+        episodeNumber: 1,
+        seasonNumber: 1,
+        releaseDate: "2017-10-13T00:00:00.000Z",
+        director: "David Fincher",
+        actors: ["Jonathan Groff", "Holt McCallany", "Anna Torv"]
       },
       {
-        "episodeNumber": 2,
-        "seasonNumber": 1,
-        "releaseDate": "2017-10-13T00:00:00.000Z",
-        "director": "Asif Kapadia",
-        "actors": ["Jonathan Groff", "Holt McCallany", "Anna Torv"]
+        episodeNumber: 2,
+        seasonNumber: 1,
+        releaseDate: "2017-10-13T00:00:00.000Z",
+        director: "Asif Kapadia",
+        actors: ["Jonathan Groff", "Holt McCallany", "Anna Torv"]
       }
     ]
   },
   {
-    "title": "Ozark",
-    "description": "A financial advisor drags his family from Chicago to the Missouri Ozarks, where he must launder money to appease a drug boss.",
-    "genres": ["Drama"],
-    "episodes": [
+    title: "Ozark",
+    description:
+      "A financial advisor drags his family from Chicago to the Missouri Ozarks, where he must launder money to appease a drug boss.",
+    genres: ["Drama"],
+    episodes: [
       {
-        "episodeNumber": 1,
-        "seasonNumber": 1,
-        "releaseDate": "2017-07-21T00:00:00.000Z",
-        "director": "Jason Bateman",
-        "actors": ["Jason Bateman", "Laura Linney", "Sofia Hublitz"]
+        episodeNumber: 1,
+        seasonNumber: 1,
+        releaseDate: "2017-07-21T00:00:00.000Z",
+        director: "Jason Bateman",
+        actors: ["Jason Bateman", "Laura Linney", "Sofia Hublitz"]
       },
       {
-        "episodeNumber": 2,
-        "seasonNumber": 1,
-        "releaseDate": "2017-07-21T00:00:00.000Z",
-        "director": "Daniel Sackheim",
-        "actors": ["Jason Bateman", "Laura Linney", "Sofia Hublitz"]
+        episodeNumber: 2,
+        seasonNumber: 1,
+        releaseDate: "2017-07-21T00:00:00.000Z",
+        director: "Daniel Sackheim",
+        actors: ["Jason Bateman", "Laura Linney", "Sofia Hublitz"]
       }
     ]
   },
   {
-    "title": "The Queen's Gambit",
-    "description": "Orphaned at the tender age of nine, prodigious introvert Beth Harmon discovers and masters the game of chess in 1960s USA.",
-    "genres": ["Drama"],
-    "episodes": [
+    title: "The Queen's Gambit",
+    description:
+      "Orphaned at the tender age of nine, prodigious introvert Beth Harmon discovers and masters the game of chess in 1960s USA.",
+    genres: ["Drama"],
+    episodes: [
       {
-        "episodeNumber": 1,
-        "seasonNumber": 1,
-        "releaseDate": "2020-10-23T00:00:00.000Z",
-        "director": "Scott Frank",
-        "actors": ["Anya Taylor-Joy", "Chloe Pirrie", "Bill Camp"]
+        episodeNumber: 1,
+        seasonNumber: 1,
+        releaseDate: "2020-10-23T00:00:00.000Z",
+        director: "Scott Frank",
+        actors: ["Anya Taylor-Joy", "Chloe Pirrie", "Bill Camp"]
       },
       {
-        "episodeNumber": 2,
-        "seasonNumber": 1,
-        "releaseDate": "2020-10-23T00:00:00.000Z",
-        "director": "Scott Frank",
-        "actors": ["Anya Taylor-Joy", "Chloe Pirrie", "Bill Camp"]
+        episodeNumber: 2,
+        seasonNumber: 1,
+        releaseDate: "2020-10-23T00:00:00.000Z",
+        director: "Scott Frank",
+        actors: ["Anya Taylor-Joy", "Chloe Pirrie", "Bill Camp"]
       }
     ]
   }
-]
+];

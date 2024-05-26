@@ -1,5 +1,7 @@
-import { PlatformTest } from "@tsed/common";
 import SuperTest from "supertest";
+
+import { PlatformTest } from "@tsed/common";
+
 import { Server } from "./Server";
 
 describe("Server", () => {

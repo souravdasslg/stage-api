@@ -1,8 +1,9 @@
-import { WatchListMediaItem } from "../entities/watch-list.entity";
-import { MongooseModel } from "@tsed/mongoose";
 import { Inject } from "@tsed/di";
-import { MediaType } from "../types";
 import { NotFound } from "@tsed/exceptions";
+import { MongooseModel } from "@tsed/mongoose";
+
+import { WatchListMediaItem } from "../entities/watch-list.entity";
+import { MediaType } from "../types";
 
 export class WatchListRepository {
   @Inject(WatchListMediaItem)
@@ -24,8 +25,6 @@ export class WatchListRepository {
       mediaType === MediaType.Movie
         ? await this.watchListMediaItemEntity.findOne({ userId, movie })
         : await this.watchListMediaItemEntity.findOne({ userId, tvShow });
-
-    console.log("Inside repository", { movie, tvShow, mediaType, watchListMediaItem });
 
     if (watchListMediaItem) return watchListMediaItem;
     const newWatchListMediaItem = new this.watchListMediaItemEntity({ movie, tvShow, userId, mediaType });
@@ -65,6 +64,14 @@ export class WatchListRepository {
   }
 
   async getRecentlyAddedMedia(userId: string) {
-    return this.watchListMediaItemEntity.find({ userId }).sort({ createdAt: "desc" }).limit(10).populate("movie").populate("tvShow").lean();
+    const recentlyAddedMedia = await this.watchListMediaItemEntity
+      .find({ userId })
+      .sort({ createdAt: "desc" })
+      .limit(10)
+      .populate("movie")
+      .populate("tvShow")
+      .lean();
+
+    return recentlyAddedMedia;
   }
 }

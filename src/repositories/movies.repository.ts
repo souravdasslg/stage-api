@@ -1,7 +1,9 @@
-import { Inject } from "@tsed/di";
+import { Inject, Injectable } from "@tsed/di";
 import { MongooseModel } from "@tsed/mongoose";
+
 import { MovieEntity } from "../entities/movie.entity";
 
+@Injectable()
 export class MovieRepository {
   @Inject(MovieEntity)
   private movieModel: MongooseModel<MovieEntity>;
