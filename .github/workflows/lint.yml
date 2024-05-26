@@ -25,5 +25,17 @@ jobs:
       - name: Install Node.js dependencies
         run: yarn install --frozen-lockfile
 
+      - name: Create Env File
+        uses: SpicyPizza/create-envfile@v2.0
+        with:
+          envkey_DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          envkey_REDIS_HOST: ${{ secrets.REDIS_HOST }}
+          envkey_REDIS_PORT: ${{ secrets.REDIS_PORT }}
+          envkey_REDIS_PASSWORD: ${{ secrets.REDIS_PASSWORD }}
+          directory: .
+          file_name: .env
+          fail_on_empty: false
+          sort_keys: false
+
       - name: Test
         run: yarn test:unit
