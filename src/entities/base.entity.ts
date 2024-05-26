@@ -1,4 +1,4 @@
-import { ObjectID, Unique, VersionKey } from "@tsed/mongoose";
+import { ObjectID, VersionKey } from "@tsed/mongoose";
 import { Default } from "@tsed/schema";
 
 export class BaseEntity {

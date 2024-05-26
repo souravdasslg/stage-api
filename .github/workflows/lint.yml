@@ -38,4 +38,4 @@ jobs:
           sort_keys: false
 
       - name: Test
-        run: yarn test:unit
+        run: yarn test

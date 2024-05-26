@@ -1,6 +1,6 @@
 import { ObjectId } from "mongodb";
 
-import { Context, Req } from "@tsed/common";
+import { Context } from "@tsed/common";
 import { useDecorators } from "@tsed/core";
 import { Inject } from "@tsed/di";
 import { Unauthorized } from "@tsed/exceptions";

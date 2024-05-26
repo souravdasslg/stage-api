@@ -40,12 +40,18 @@ export class WatchListService {
     return response;
   }
 
-  async removeMediaFromWatchList({ userId, mediaId }: { userId: string; mediaId: string }) {
-    return this.watchListRepository.removeMediaFromWatchList({ userId, mediaId });
+  async removeMediaFromWatchList({ watchListItemId }: { watchListItemId: string }) {
+    return this.watchListRepository.removeMediaFromWatchList({ watchListItemId });
   }
 
-  async getPaginatedWatchList(userId: string, { page, size, sort }: Pageable) {
-    return this.watchListRepository.getPaginatedWatchList(userId, { page, size, sort });
+  async getPaginatedWatchList(userId: string, { page, size }: Pageable) {
+    const response = await this.watchListRepository.getPaginatedWatchList(userId, { page, size });
+    return {
+      data: response.items,
+      totalCount: response.totalItems,
+      page: page,
+      totalPages: Math.ceil(response.totalItems / size)
+    };
   }
 
   @UseCache({ canCache: "no-nullish" })

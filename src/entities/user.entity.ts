@@ -1,5 +1,5 @@
 import { Model, Unique } from "@tsed/mongoose";
-import { Format, Property } from "@tsed/schema";
+import { Property } from "@tsed/schema";
 
 import { Genre } from "../types";
 import { BaseEntity } from "./base.entity";

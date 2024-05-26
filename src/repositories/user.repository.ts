@@ -1,6 +1,6 @@
 import { Inject, Injectable } from "@tsed/di";
 import { MongooseModel } from "@tsed/mongoose";
-import { PlatformCache, UseCache } from "@tsed/platform-cache";
+import { UseCache } from "@tsed/platform-cache";
 
 import { UserEntity } from "../entities/user.entity";
 
@@ -11,6 +11,10 @@ export class UserRepository {
 
   async add(user: UserEntity): Promise<UserEntity> {
     return this.userModel.create(user);
+  }
+
+  async findByUserName(userName: string): Promise<UserEntity | null> {
+    return this.userModel.findOne({ username: userName });
   }
 
   @UseCache({ canCache: "no-nullish" })

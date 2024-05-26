@@ -1,4 +1,4 @@
-import { Model, MongooseIndex, Ref } from "@tsed/mongoose";
+import { Indexed, Model, MongooseIndex, Ref } from "@tsed/mongoose";
 import { Property, Required } from "@tsed/schema";
 
 import { MediaType } from "../types";
@@ -6,7 +6,7 @@ import { BaseEntity } from "./base.entity";
 import { MovieEntity } from "./movie.entity";
 import { TVShowEntity } from "./tv-show.entity";
 
-@Model({ name: "watchListMediaItems", schemaOptions: { timestamps: true } })
+@Model({ name: "watchListMediaItems", schemaOptions: { timestamps: true, autoIndex: true } })
 @MongooseIndex({ userId: 1, movie: 1, tvShow: 1 }, { unique: true })
 export class WatchListMediaItem extends BaseEntity {
   @Property()
@@ -24,5 +24,6 @@ export class WatchListMediaItem extends BaseEntity {
   tvShow?: Ref<TVShowEntity>;
 
   @Property()
+  @Indexed()
   addedAt!: Date;
 }

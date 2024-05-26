@@ -10,19 +10,25 @@
 
 > **Important!** Stage API requires Node >= 14, Express >= 4 and TypeScript >= 4.
 
+
 ```batch
 # install dependencies
 $ yarn install
 
+# copy the env.example file to .env
+$ cp .env.example .env
+
 # seed the database with sample data
 $ yarn seed
+
+# If you want to seed the watchlist
+$ yarn seed --watchlist. (Make sure the database is empty)
 
 # serve
 $ yarn start
 
-# build for production
-$ yarn build
-$ yarn start:prod
+# run tests
+$ yarn test
 ```
 
 ## Docker
@@ -37,7 +43,7 @@ docker compose up
 
 ## 📚 Documentation
 
-API documentation is available at [http://0.0.0.0:8083/doc/](http://0.0.0.0:8083/doc/)
+API documentation is available at [Local](http://0.0.0.0:8083/doc/) [Hosted](https://stage-api-yv6m.onrender.com/doc)
 
 ## 🔨 Design Choices
 
@@ -72,3 +78,19 @@ Designing the schema for the watch list comes with two options.
    The cache is invalidated and regenerated when a new media item is added on the list. Server will respond blazingly fast ⚡️
 
    This makes the endpoint super fast to fetch and puts 0 load on the database.
+
+Note: 
+ Assuming multiple instances of application is running , for such scenario our choices for hosted cache service becomes prominent. Hosted cache adds some latency for sure, one way to reduce that is host the cache nearby to the application. Preferably inside vpc.
+
+ Note 2: Used redis as hosted cache, this free instance is hosted in us-east region, adding a bit of latency in the final response.
+
+ 3. Database Indexing
+  Used database indexing to speed up the query performance. Check the schema for more details.
+
+## 🌎 Hosting
+1. Backend application is hosted at Render.
+https://stage-api-yv6m.onrender.com
+
+Note: Render spins down the application after 15 minutes of inactivity. The first request might take a long time to respond.
+
+

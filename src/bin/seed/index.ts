@@ -1,3 +1,5 @@
+import { WatchListRepository } from "@/repositories/watchlist.repository";
+
 import { Command, CommandProvider, Inject, QuestionOptions } from "@tsed/cli-core";
 
 import { MovieEntity } from "../../entities/movie.entity";
@@ -6,18 +8,27 @@ import { UserEntity } from "../../entities/user.entity";
 import { MovieRepository } from "../../repositories/movies.repository";
 import { TVShowRepository } from "../../repositories/tv-show.repository";
 import { UserRepository } from "../../repositories/user.repository";
-import { Genre } from "../../types";
+import { Genre, MediaType } from "../../types";
 import sampleMovies from "./movies.json";
 import sampleTvSeries from "./tv-series.json";
 import sampleUsers from "./users.json";
 
-export interface SeedContext {}
+export interface SeedContext {
+  watchlist: boolean;
+}
 
 @Command({
   name: "seed",
   description: "Seed the database with data",
   args: {},
-  options: {},
+  options: {
+    "--watchlist": {
+      type: Boolean,
+      description: "List of data to seed",
+      required: false,
+      defaultValue: false
+    }
+  },
   allowUnknownOption: false
 })
 export class Seed implements CommandProvider {
@@ -30,14 +41,17 @@ export class Seed implements CommandProvider {
   @Inject(UserRepository)
   private userRepository: UserRepository;
 
+  @Inject(WatchListRepository)
+  private watchListRepository: WatchListRepository;
+
   async $prompt(initialOptions: Partial<SeedContext>): Promise<QuestionOptions> {
     return [];
   }
 
   $mapContext(ctx: Partial<SeedContext>): SeedContext {
     return {
-      ...ctx
-      // map something, based on ctx
+      ...ctx,
+      watchlist: ctx.watchlist ?? false
     };
   }
   async $exec(ctx: SeedContext): Promise<any> {
@@ -46,6 +60,7 @@ export class Seed implements CommandProvider {
         title: "✨ Seeding the database",
         task: async () => {
           /** Add Users */
+          console.log("Adding users...");
           await Promise.all(
             sampleUsers.map((user) => {
               const userEntity: UserEntity = {
@@ -62,7 +77,8 @@ export class Seed implements CommandProvider {
               return this.userRepository.add(userEntity);
             })
           );
-          /** Add Movies */
+          // /** Add Movies */
+          console.log("Adding movies...");
           await Promise.all(
             sampleMovies.map((movie) => {
               const movieEntity: MovieEntity = {
@@ -73,7 +89,8 @@ export class Seed implements CommandProvider {
               return this.movieRepository.add(movieEntity);
             })
           );
-          /** Add TV Shows */
+          // /** Add TV Shows */
+          // console.log("Adding TV Shows...");
           await Promise.all(
             sampleTvSeries.map((tvShow) => {
               const tvShowEntity: TVShowEntity = {
@@ -87,6 +104,32 @@ export class Seed implements CommandProvider {
               return this.tvShowRepository.add(tvShowEntity);
             })
           );
+          /** Add WatchList */
+
+          if (ctx.watchlist) {
+            const user = await this.userRepository.findByUserName(sampleUsers[0].username);
+            const movies = await this.movieRepository.find();
+            const tvShows = await this.tvShowRepository.find();
+
+            const firstTenMovies = movies.slice(0, 10);
+            const firstTenTvShows = tvShows.slice(0, 10);
+
+            for (const movie of firstTenMovies) {
+              await this.watchListRepository.addMediaToWatchList({
+                userId: user!._id!.toString(),
+                mediaType: MediaType.Movie,
+                movie: movie._id!.toString()
+              });
+
+              for (const tvShow of firstTenTvShows) {
+                await this.watchListRepository.addMediaToWatchList({
+                  userId: user!._id!.toString(),
+                  mediaType: MediaType.TVShow,
+                  tvShow: tvShow._id!.toString()
+                });
+              }
+            }
+          }
         }
       }
     ];

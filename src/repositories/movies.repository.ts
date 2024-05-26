@@ -15,4 +15,8 @@ export class MovieRepository {
   async findById(id: string): Promise<MovieEntity | null> {
     return this.movieModel.findById(id);
   }
+
+  async find(): Promise<MovieEntity[]> {
+    return this.movieModel.find();
+  }
 }

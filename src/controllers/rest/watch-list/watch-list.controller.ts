@@ -1,4 +1,4 @@
-import { BodyParams, Context, Controller, Delete, Get, Inject, Post, QueryParams } from "@tsed/common";
+import { BodyParams, Context, Controller, Delete, Get, Inject, PathParams, Post, QueryParams } from "@tsed/common";
 import { Returns } from "@tsed/schema";
 
 import { WatchListMediaItem } from "../../../entities/watch-list.entity";
@@ -27,7 +27,8 @@ export class WatchListController {
   async getPaginatedWatchList(@QueryParams() pageableOptions: Pageable, @Context() ctx: Context) {
     const response = await this.watchListService.getPaginatedWatchList(ctx.user.id, pageableOptions);
     return {
-      data: response
+      data: response.data,
+      totalCount: response.totalCount
     };
   }
 
@@ -43,11 +44,10 @@ export class WatchListController {
     };
   }
 
-  @Delete("/")
-  async removeFromWatchList(@BodyParams() mediaId: string, @Context() ctx: Context) {
+  @Delete("/:watchListItemId")
+  async removeFromWatchList(@PathParams("watchListItemId") watchListItemId: string, @Context() ctx: Context) {
     await this.watchListService.removeMediaFromWatchList({
-      userId: ctx.user.id,
-      mediaId
+      watchListItemId
     });
     return {
       message: "Media removed from watch list"

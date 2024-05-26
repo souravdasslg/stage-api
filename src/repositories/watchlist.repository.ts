@@ -33,15 +33,16 @@ export class WatchListRepository {
     return newWatchListMediaItem;
   }
 
-  async removeMediaFromWatchList({ userId, mediaId }: { userId: string; mediaId: string }) {
-    const watchListMediaItem = await this.watchListMediaItemEntity.findOne({ userId, $or: [{ movie: mediaId }, { tvShow: mediaId }] });
-    if (!watchListMediaItem) throw new NotFound("Media not found in watch list");
+  async removeMediaFromWatchList({ watchListItemId }: { watchListItemId: string }) {
+    const watchListMediaItem = await this.watchListMediaItemEntity.findOne({ _id: watchListItemId });
+    if (!watchListMediaItem) throw new NotFound("Invalid watch list item ID");
 
     return this.watchListMediaItemEntity.deleteOne({ _id: watchListMediaItem._id });
   }
 
-  async getPaginatedWatchList(userId: string, { page, size, sort }: { page: number; size: number; sort: string | string[] }) {
-    const skip = (page - 1) * size;
+  async getPaginatedWatchList(userId: string, { page, size }: { page: number; size: number }) {
+    const currentPage = Math.max(page, 1); // Ensure page is at least 1
+    const skip = (currentPage - 1) * size;
     const limit = size;
 
     const query = this.watchListMediaItemEntity
@@ -59,7 +60,7 @@ export class WatchListRepository {
       items,
       totalItems,
       totalPages: Math.ceil(totalItems / limit),
-      currentPage: page
+      currentPage
     };
   }
 

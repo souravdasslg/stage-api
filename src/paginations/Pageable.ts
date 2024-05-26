@@ -15,15 +15,9 @@ export class Pageable {
   @Description("Number of objects per page.")
   size: number = 20;
 
-  @For(SpecTypes.JSON, oneOf(string(), array().items(string()).maxItems(2)))
-  @OnDeserialize((value: string | string[]) => (isString(value) ? value.split(",") : value))
-  @Description("Sorting criteria: property(,asc|desc|date-added). Default sort order is ascending. Multiple sort criteria are supported.")
-  sort: string | string[];
-
   constructor(options: Partial<Pageable>) {
     options.page && (this.page = options.page);
     options.size && (this.size = options.size);
-    options.sort && (this.sort = options.sort);
   }
 
   get offset() {

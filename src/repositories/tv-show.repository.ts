@@ -14,4 +14,8 @@ export class TVShowRepository {
   async findById(id: string): Promise<TVShowEntity | null> {
     return this.tvShowModel.findById(id);
   }
+
+  async find(): Promise<TVShowEntity[]> {
+    return this.tvShowModel.find();
+  }
 }
