@@ -1,0 +1,40 @@
+diff --git a/node_modules/@types/cache-manager-ioredis/index.d.ts b/node_modules/@types/cache-manager-ioredis/index.d.ts
+index f57895d..6cb38a6 100644
+--- a/node_modules/@types/cache-manager-ioredis/index.d.ts
++++ b/node_modules/@types/cache-manager-ioredis/index.d.ts
+@@ -1,4 +1,4 @@
+-import { Cache, CacheOptions, CachingConfig, Store } from "cache-manager";
++import { Cache, CachingConfig, Store, StoreConfig } from "cache-manager";
+ import * as IORedis from "ioredis";
+ 
+ declare const methods: CacheManagerIORedis.RedisStoreConstructor;
+@@ -8,7 +8,7 @@ export {};
+ declare module "cache-manager" {
+     function caching(IConfig: CacheManagerIORedis.RedisStoreClusterConfig): CacheManagerIORedis.ClusterCache;
+     function caching(IConfig: CacheManagerIORedis.RedisStoreSingleNodeConfig): CacheManagerIORedis.SingleNodeCache;
+-    function caching(IConfig: StoreConfig & CacheOptions): Cache;
++    function caching(IConfig: StoreConfig & CachingConfig<any>): Cache;
+ }
+ 
+ declare namespace CacheManagerIORedis {
+@@ -26,16 +26,16 @@ declare namespace CacheManagerIORedis {
+             | ((...options: RedisStoreClusterConfig[]) => RedisClusterStore);
+     }
+ 
+-    type RedisStoreSingleNodeConfig = CachingConfig & IORedis.RedisOptions & {
++    type RedisStoreSingleNodeConfig = CachingConfig<any> & IORedis.RedisOptions & {
+         store: RedisStoreConstructor;
+         max?: number | undefined;
+-    } & CacheOptions;
++    };
+ 
+-    type RedisStoreClusterConfig = CachingConfig & {
++    type RedisStoreClusterConfig = CachingConfig<any> & {
+         store: RedisStoreConstructor;
+         max?: number | undefined;
+         clusterConfig: ClusterOptions;
+-    } & CacheOptions;
++    };
+ 
+     interface RedisStore extends Store {
+         getClient(): IORedis.Redis | IORedis.Cluster;

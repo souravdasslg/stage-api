@@ -17,7 +17,7 @@ import "./datasource";
   ...config,
   cache: {
     ttl: 60 * 60 * 1000, // 1 Hour
-    store: redisStore,
+    store: "memory",
     prefix: "stage" // to namespace all keys related to the cache
   },
   acceptMimes: ["application/json"],

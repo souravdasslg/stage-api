@@ -3,29 +3,23 @@ ARG NODE_VERSION=20.10.0
 FROM node:${NODE_VERSION}-alpine as build
 WORKDIR /opt
 
-COPY package.json yarn.lock tsconfig.json tsconfig.compile.json .barrelsby.json ./
-
-RUN yarn install --pure-lockfile
-
 COPY . .
-
+RUN yarn install --pure-lockfile
+RUN yarn postinstall
 RUN yarn build
 
 FROM node:${NODE_VERSION}-alpine as runtime
-ENV WORKDIR /opt
-WORKDIR $WORKDIR
+WORKDIR /opt
 
-RUN apk update && apk add build-base git curl
-RUN npm install -g pm2
+RUN apk add --no-cache build-base git curl && npm install -g pm2
 
 COPY --from=build /opt .
-
-RUN yarn --pure-lockfile --production
-
-COPY . .
+RUN yarn install --pure-lockfile
+RUN yarn postinstall
 
 EXPOSE 8081
 ENV PORT 8081
 ENV NODE_ENV production
 
-CMD ["pm2-runtime", "start", "processes.config.js", "--env", "production"]
+CMD ["yarn", "start:prod"]
+
