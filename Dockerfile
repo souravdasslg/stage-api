@@ -7,7 +7,7 @@ COPY package.json yarn.lock tsconfig.json tsconfig.compile.json .barrelsby.json 
 
 RUN yarn install --pure-lockfile
 
-COPY ./src ./src
+COPY . .
 
 RUN yarn build
 
