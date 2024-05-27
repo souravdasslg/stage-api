@@ -1,7 +1,8 @@
+import { MediaType } from "@/types";
+
 import { Indexed, Model, MongooseIndex, Ref } from "@tsed/mongoose";
 import { Property, Required } from "@tsed/schema";
 
-import { MediaType } from "../types";
 import { BaseEntity } from "./base.entity";
 import { MovieEntity } from "./movie.entity";
 import { TVShowEntity } from "./tv-show.entity";

@@ -12,6 +12,11 @@ export class Pagination<T> extends Pageable {
   @Default(0)
   totalCount: number = 0;
 
+  @Integer()
+  @MinLength(0)
+  @Default(0)
+  totalPages: number = 0;
+
   constructor({ data, totalCount, pageable }: Partial<Pagination<T>> & { pageable: Pageable }) {
     super(pageable);
     data && (this.data = data);

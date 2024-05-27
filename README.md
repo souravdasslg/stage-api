@@ -10,7 +10,6 @@
 
 > **Important!** Stage API requires Node >= 14, Express >= 4 and TypeScript >= 4.
 
-
 ```batch
 # install dependencies
 $ yarn install
@@ -44,6 +43,20 @@ docker compose up
 ## 📚 Documentation
 
 API documentation is available at [Local](http://0.0.0.0:8083/doc/) [Hosted](https://stage-api-yv6m.onrender.com/doc)
+
+API endpoints are protected with `x-user-id header`. This `x-user-id` can be any user id from mongo db.
+
+Sample Request to add media to watch list
+
+```
+curl --location 'http://0.0.0.0:8083/api/watch-list' \
+--header 'accept: */*' \
+--header 'x-user-id: 66531427fe8602d172d006cd' \
+--header 'Content-Type: application/json' \
+--data '{
+  "mediaId": "66531429fe8602d172d006ec"
+}'
+```
 
 ## 🔨 Design Choices
 
@@ -79,18 +92,17 @@ Designing the schema for the watch list comes with two options.
 
    This makes the endpoint super fast to fetch and puts 0 load on the database.
 
-Note: 
- Assuming multiple instances of application is running , for such scenario our choices for hosted cache service becomes prominent. Hosted cache adds some latency for sure, one way to reduce that is host the cache nearby to the application. Preferably inside vpc.
+Note:
+Assuming multiple instances of application is running , for such scenario our choices for hosted cache service becomes prominent. Hosted cache adds some latency for sure, one way to reduce that is host the cache nearby to the application. Preferably inside vpc.
 
- Note 2: Used redis as hosted cache, this free instance is hosted in us-east region, adding a bit of latency in the final response.
+Note 2: Used redis as hosted cache, this free instance is hosted in us-east region, adding a bit of latency in the final response.
 
- 3. Database Indexing
-  Used database indexing to speed up the query performance. Check the schema for more details.
+3.  Database Indexing
+    Used database indexing to speed up the query performance. Check the schema for more details.
 
 ## 🌎 Hosting
-1. Backend application is hosted at Render.
-https://stage-api-yv6m.onrender.com
+
+1. Backend application is hosted at Render. Render provides integrated CI-CD feature.
+   https://stage-api-yv6m.onrender.com
 
 Note: Render spins down the application after 15 minutes of inactivity. The first request might take a long time to respond.
-
-

@@ -1,18 +1,17 @@
+import { Server } from "@/Server";
+import sampleMovie from "@/bin/seed/movies.json";
+import sampleTVShow from "@/bin/seed/tv-series.json";
+import { UserEntity } from "@/entities/user.entity";
+import { MovieRepository } from "@/repositories/movies.repository";
+import { TVShowRepository } from "@/repositories/tv-show.repository";
+import { UserRepository } from "@/repositories/user.repository";
+import { WatchListRepository } from "@/repositories/watchlist.repository";
+import { Genre, MediaType } from "@/types";
 import SuperTest from "supertest";
 
 import { PlatformTest } from "@tsed/common";
 import { PlatformExpress } from "@tsed/platform-express";
 import { TestMongooseContext } from "@tsed/testing-mongoose";
-
-import { Server } from "../../../Server";
-import sampleMovie from "../../../bin/seed/movies.json";
-import sampleTVShow from "../../../bin/seed/tv-series.json";
-import { UserEntity } from "../../../entities/user.entity";
-import { MovieRepository } from "../../../repositories/movies.repository";
-import { TVShowRepository } from "../../../repositories/tv-show.repository";
-import { UserRepository } from "../../../repositories/user.repository";
-import { WatchListRepository } from "../../../repositories/watchlist.repository";
-import { Genre, MediaType } from "../../../types";
 
 describe("Server", () => {
   let authUser: UserEntity;

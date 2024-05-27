@@ -1,3 +1,7 @@
+import { config } from "@/config/index";
+import * as pages from "@/controllers/pages/index";
+import * as rest from "@/controllers/rest/index";
+import "@/datasource";
 import redisStore from "cache-manager-ioredis";
 import { join } from "path";
 
@@ -8,15 +12,10 @@ import { Configuration, Inject } from "@tsed/di";
 import "@tsed/platform-express";
 import "@tsed/swagger";
 
-import { config } from "./config/index";
-import * as pages from "./controllers/pages/index";
-import * as rest from "./controllers/rest/index";
-import "./datasource";
-
 @Configuration({
   ...config,
   cache: {
-    ttl: 60 * 60 * 1000, // 1 Hour
+    ttl: 60 * 60 * 24 * 1000, // 1 Day
     store: "memory",
     prefix: "stage" // to namespace all keys related to the cache
   },

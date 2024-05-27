@@ -1,6 +1,4 @@
-import { isString } from "@tsed/core";
-import { OnDeserialize } from "@tsed/json-mapper";
-import { Default, Description, For, Integer, Min, SpecTypes, array, oneOf, string } from "@tsed/schema";
+import { Default, Description, Integer, Min } from "@tsed/schema";
 
 export class Pageable {
   @Integer()

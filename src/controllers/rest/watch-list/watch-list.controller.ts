@@ -1,11 +1,12 @@
+import { WatchListMediaItem } from "@/entities/watch-list.entity";
+import { Auth } from "@/middlewares/auth.middleware";
+import { Pageable } from "@/paginations/Pageable";
+import { Pagination } from "@/paginations/Pagination";
+import { WatchListService } from "@/services/watchList.service";
+
 import { BodyParams, Context, Controller, Delete, Get, Inject, PathParams, Post, QueryParams } from "@tsed/common";
 import { Returns } from "@tsed/schema";
 
-import { WatchListMediaItem } from "../../../entities/watch-list.entity";
-import { Auth } from "../../../middlewares/auth.middleware";
-import { Pageable } from "../../../paginations/Pageable";
-import { Pagination } from "../../../paginations/Pagination";
-import { WatchListService } from "../../../services/watchList.service";
 import { AddToWatchListPayload } from "./watch-list.schema";
 
 @Controller("/watch-list")
@@ -28,7 +29,9 @@ export class WatchListController {
     const response = await this.watchListService.getPaginatedWatchList(ctx.user.id, pageableOptions);
     return {
       data: response.data,
-      totalCount: response.totalCount
+      totalCount: response.totalCount,
+      page: response.page,
+      totalPages: response.totalPages
     };
   }
 

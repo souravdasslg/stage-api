@@ -1,3 +1,4 @@
+import { UserRepository } from "@/repositories/user.repository";
 import { ObjectId } from "mongodb";
 
 import { Context } from "@tsed/common";
@@ -6,8 +7,6 @@ import { Inject } from "@tsed/di";
 import { Unauthorized } from "@tsed/exceptions";
 import { Middleware, MiddlewareMethods, UseAuth } from "@tsed/platform-middlewares";
 import { In, Returns } from "@tsed/schema";
-
-import { UserRepository } from "../repositories/user.repository";
 
 @Middleware()
 export class AuthMiddleware implements MiddlewareMethods {

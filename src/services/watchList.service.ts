@@ -1,12 +1,12 @@
+import { Pageable } from "@/paginations/Pageable";
+import { MovieRepository } from "@/repositories/movies.repository";
+import { TVShowRepository } from "@/repositories/tv-show.repository";
+import { WatchListRepository } from "@/repositories/watchlist.repository";
+import { MediaType } from "@/types";
+
 import { Inject, Injectable } from "@tsed/di";
 import { NotFound } from "@tsed/exceptions";
 import { PlatformCache, UseCache } from "@tsed/platform-cache";
-
-import { Pageable } from "../paginations/Pageable";
-import { MovieRepository } from "../repositories/movies.repository";
-import { TVShowRepository } from "../repositories/tv-show.repository";
-import { WatchListRepository } from "../repositories/watchlist.repository";
-import { MediaType } from "../types";
 
 @Injectable()
 export class WatchListService {

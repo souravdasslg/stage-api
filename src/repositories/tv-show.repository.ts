@@ -1,7 +1,7 @@
+import { TVShowEntity } from "@/entities/tv-show.entity";
+
 import { Inject } from "@tsed/di";
 import { MongooseModel } from "@tsed/mongoose";
-
-import { TVShowEntity } from "../entities/tv-show.entity";
 
 export class TVShowRepository {
   @Inject(TVShowEntity)

@@ -1,9 +1,9 @@
+import { WatchListMediaItem } from "@/entities/watch-list.entity";
+import { MediaType } from "@/types";
+
 import { Inject } from "@tsed/di";
 import { NotFound } from "@tsed/exceptions";
 import { MongooseModel } from "@tsed/mongoose";
-
-import { WatchListMediaItem } from "../entities/watch-list.entity";
-import { MediaType } from "../types";
 
 export class WatchListRepository {
   @Inject(WatchListMediaItem)

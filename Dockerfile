@@ -22,4 +22,3 @@ ENV PORT 8081
 ENV NODE_ENV production
 
 CMD ["yarn", "start:prod"]
-
