@@ -8,6 +8,8 @@ import { Inject, Injectable } from "@tsed/di";
 import { NotFound } from "@tsed/exceptions";
 import { PlatformCache, UseCache } from "@tsed/platform-cache";
 
+const getRecentlyAddedMediaCacheKey = (userId: string) => `stage:WatchListService:getRecentlyAddedMedia:${userId}`;
+
 @Injectable()
 export class WatchListService {
   @Inject()
@@ -30,13 +32,13 @@ export class WatchListService {
 
     const response = await this.watchListRepository.addMediaToWatchList({
       userId,
-      ...(mediaType === "Movie" && media ? { movie: media._id } : {}),
-      ...(mediaType === "TVShow" && media ? { tvShow: media._id } : {}),
+      ...(mediaType === MediaType.Movie && media ? { movie: media._id } : {}),
+      ...(mediaType === MediaType.TVShow && media ? { tvShow: media._id } : {}),
       mediaType
     });
 
     // Refresh recently added media cache
-    this.cache.refresh(() => this.getRecentlyAddedMedia(userId));
+    await this.cache.del(getRecentlyAddedMediaCacheKey(userId));
     return response;
   }
 
@@ -54,7 +56,9 @@ export class WatchListService {
     };
   }
 
-  @UseCache({ canCache: "no-nullish" })
+  @UseCache({
+    canCache: "no-nullish"
+  })
   async getRecentlyAddedMedia(userId: string) {
     return this.watchListRepository.getRecentlyAddedMedia(userId);
   }

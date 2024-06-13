@@ -16,7 +16,7 @@ import "@tsed/swagger";
   ...config,
   cache: {
     ttl: 60 * 60 * 24 * 1000, // 1 Day
-    store: "memory",
+    store: redisStore,
     prefix: "stage" // to namespace all keys related to the cache
   },
   acceptMimes: ["application/json"],
